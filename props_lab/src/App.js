@@ -14,7 +14,6 @@ class App extends React.Component {
       donation: 0,
       target: 5000,
       recentDonation: [],
-      targert: 5000,
     }
   }
 
@@ -54,7 +53,7 @@ class App extends React.Component {
     this.setState({
       donorName: " ",
       caption: " ",
-      donation: 5,
+      donation: 0,
       recentDonation: recentDonation
     })
   }
@@ -62,11 +61,12 @@ class App extends React.Component {
   handleProgressBar = () => {
     const { recentDonation, target } = this.state;
     let total = 0;
-    let percentage = 0;
+   
     for (let i = 0; i < recentDonation.length; i++) {
       total += recentDonation[i].donation
     }
-    percentage = ((total / target) * 100);
+    const percentage = ((total / target) * 100);
+    console.log(total, percentage)
     return (total, percentage)
   }
 
