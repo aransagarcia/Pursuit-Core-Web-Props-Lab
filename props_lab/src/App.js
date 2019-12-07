@@ -12,7 +12,7 @@ class App extends React.Component {
       donorName: " ",
       caption: " ",
       donation: 0,
-      targert: 5000,
+      target: 5000,
       recentDonation: [],
       targert: 5000,
     }
@@ -88,7 +88,7 @@ class App extends React.Component {
 
               {this.state.recentDonation.map((donor, i) => {
                 return (
-                  <DonationForm
+                  <RecentDonations
                     donorName={donor.donorName}
                     caption={donor.caption}
                     donation={donor.donation}
@@ -105,7 +105,7 @@ class App extends React.Component {
               <ProgressBar
                 total={total}
                 percentage={percentage}
-                target={target.this.state}
+                target={this.state.target}
               />
 
               <hr />

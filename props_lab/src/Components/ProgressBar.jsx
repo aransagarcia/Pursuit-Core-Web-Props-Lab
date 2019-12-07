@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProgressBar = () => {
+const ProgressBar = (props) => {
     const { total, target, percentage } = props
     return (
         <>
